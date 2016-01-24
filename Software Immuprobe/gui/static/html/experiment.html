@@ -1,0 +1,80 @@
+<script type="text/javascript" src="static/bootstrap-3.3.6-dist/js/bootstrap.js"></script>  
+<script type="text/javascript" src="static/js/jsfun.js"></script>
+<script type="text/javascript" src="static/js/experiscript.js"></script>
+
+<div class="container">
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#tab1">Initiate Measurement</a></li>
+		<li><a data-toggle="tab" href="#tab2">Numeric Results</a></li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#tab3">Plots<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a data-toggle="tab" href="#tab31">Overview</a></li>
+				<li><a data-toggle="tab" href="#tab32">Intensity</a></li>
+				<li><a data-toggle="tab" href="#tab33">Categorized</a></li>
+				<li><a data-toggle="tab" href="#tab34">Standard Curve</a></li>
+				<li><a data-toggle="tab" href="#tab35">Signal To Background</a></li>                                                
+			</ul>
+		</li>
+		<li><a data-toggle="tab" href="#tab4">Downloads</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="tab1" class="tab-pane fade in active">
+			<br>
+			<form>
+				<label for="capture">New Experiment</label>
+				<input type="radio" name="uploadradio" id="radio_capture" checked="checked">
+				<br />
+				<label for="upload">Upload existing serialized experiment</label>
+				<input type="radio" name="uploadradio" id="radio_upload">
+			</form>	
+			<br>
+			<form id='file_upload_form' action="/upload" id="data" method="post" enctype="multipart/form-data">
+				<input name="file" type="file" id="file" accept=".ipr"/>
+				<br>
+			</form>
+			<button id="start_button" class="btn btn-danger">Run experiment</button> <p id="outcome"></p>
+			<div class="progress" style="width:90%">
+				<div id="progr" class="progress-bar" role="progressbar"
+				aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+				0%</div>
+			</div>
+		</div>
+		<div id="tab2" class="tab-pane fade">
+			<br>
+			<div id="tablediv">
+			</div>
+		</div>
+		<div id="tab31" class="tab-pane" style="height:400px; width:600px;" >
+			<img id="plot_overview" alt="No measurement done, so there's nothing to see here..." class="fit" src="" style="width:100%;height:100%;">
+		</div>
+		<div id="tab32" class="tab-pane" style="height:400px; width:600px;" >
+			<img id="plot_intensity" alt="No measurement done, so there's nothing to see here..." class="fit" src="" style="width:100%;height:100%;">
+		</div>
+		<div id="tab33" class="tab-pane" style="height:400px; width:600px;">
+			<img id="plot_categorized" alt="No measurement done, so there's nothing to see here..." class="fit" src="" style="width:100%;height:100%;">
+		</div>
+		<div id="tab34" class="tab-pane" style="height:400px; width:600px;">
+			<img id="plot_standard_curve" alt="No measurement done, so there's nothing to see here..." class="fit" src="" style="width:100%;height:100%;">
+		</div>
+		<div id="tab35" class="tab-pane" style="height:400px; width:600px;">
+			<img id="plot_signal_to_noise" alt="No measurement done, so there's nothing to see here..." class="fit" src="" style="width:100%;height:100%;">
+		</div>
+		<div id="tab4" class="tab-pane fade">
+			<br>
+			<p>
+				<a id="csv_link" class="btn btn-primary" role="button" href="results/csv">Download concentrations as CSV</a>
+				<a id="overview_link" class="btn btn-primary" role="button" href="/results/plot?download&type=overview">Download Overview Plot</a>
+				<a id="intensity_link" class="btn btn-primary" role="button" href="/results/plot?download&type=intensity">Download Intensity Plot</a>
+			</p>
+			<p>
+				<a id="categorized_link" class="btn btn-primary" role="button" href="/results/plot?download&type=categorized">Download Categorized Plot</a>
+				<a id="standard_link"class="btn btn-primary" role="button" href="/results/plot?download&type=standard_curve">Download Standard Curve Plot</a>	
+				<a id="serialize_link"class="btn btn-primary" role="button" href="/results/serialize">Download Serialized Experiment</a>	
+			</p>
+		</div>
+	</div>
+</div>
+
+
+

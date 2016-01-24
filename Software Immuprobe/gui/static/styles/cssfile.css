@@ -1,0 +1,104 @@
+#header {
+    font-size: 18px;
+}
+
+#body {
+    font-size: 18px;
+	overflow:hidden;
+}
+
+#footer {
+	font-size: 18px;
+}
+
+#frame {
+	margin:auto;
+	padding: 5px;
+	float: left;
+	width:80%;
+}
+
+#time {
+	float:left;
+	padding:2px;
+	font-size:15px;
+}
+
+#date {
+	float:left;
+	padding:2px;
+	font-size:15px;
+}
+#preview{
+	font-size:15px;
+	
+}
+
+.hometable {
+}
+
+.calibrationtable {
+
+}
+
+.categorytable {
+}
+
+#tablediv {
+font-size:18px;
+width:90%;
+}
+
+
+.navigation ul {
+}
+
+.navigation li {
+}
+
+.navigation {
+	height: 100%;
+	float: left;
+	padding: 5px;
+}
+
+.navbutton {
+	width: auto;	
+}
+
+.homediv {
+	float: left;
+	padding: 10px;
+	font-size:18px;
+	
+}
+
+.nav-tabs{
+	font-size:18px;
+}
+
+.tab-content{
+	font-size:18px;
+}
+
+input {
+	resize: horizontal;
+	width: 110px;
+}
+
+#file{
+	width:auto;
+}
+
+
+
+
+#availableCategories .ui-selecting { background: #337ab7; width:100px; }
+#availableCategories .ui-selected { background: #337ab7; color: black; width:100px; }
+#availableCategories { list-style-type: none; margin: 2px; padding: 2px; width:100px; }
+#availableCategories td { padding: 2px; width:auto;}
+
+#upload .ui-selecting { background: #337ab7; width:100px; }
+#upload .ui-selected { background: #337ab7; color: black; width:100px;}
+#upload { list-style-type: none; margin: 2px; padding: 2px; width:100px; }
+#upload td { padding: 2px; width:100px;}

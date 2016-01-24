@@ -1,0 +1,5 @@
+The first-boots scripts get executed on the RaspberryPi after the first boot.
+Their main purpose is to set up software packages and the IMPROBE environment.
+
+
+TODO: Create an Archlinux package for all that stuff.

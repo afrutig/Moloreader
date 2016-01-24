@@ -1,0 +1,10 @@
+[Unit]
+Description=rtc1307 init
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c 'echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device; hwclock -s'
+SyslogIdentifier=rtc_ds1307
+
+[Install]
+WantedBy=multi-user.target

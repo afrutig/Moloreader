@@ -1,0 +1,6 @@
+*.img
+*.tar.gz
+pkg_cache/
+root/
+boot/
+pkg_cache

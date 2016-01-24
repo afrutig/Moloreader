@@ -1,0 +1,26 @@
+The os-builder scripts build an image for the RaspberryPi 2 from scratch.
+Building should be done on a Archlinux system such as Antergor or Manjaro.
+
+Quick Start:
+Build a fresh image with:
+	make
+Copy the image to the microsd card:
+sudo dd if=immuprobe.img of=/dev/sd??
+
+Insert the card into the Pi and start it. On the first boot a lot of things will be installed. This takes some minutes. To watch installation progress, log in on the Pi as user 'alarm', password 'alarm'. Then execute this command:
+journalctl -f -t firstboot
+
+Makefile:
+Build a fresh image with: make
+
+firstboot:
+Scripts to be executed on the RaspberryPi after it's first boot.
+
+packages.conf:
+Contains additional packages for the RaspberryPi image.
+
+pacman.conf:
+Configuration for the packet manager.
+
+config-files:
+Files that will be copied onto the image. The directory structure in config-files is the same as it will be on the root filesystem on the image.

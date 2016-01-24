@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GUI for our handheld reader</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/cssfile.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap-3.3.6-dist/css/bootstrap.css') }}"/>
+	<link rel="stylesheet" type="text/css"href="{{ url_for('static' ,filename='/styles/keyboard.css') }}"/>
+	<script type=text/javascript>
+	$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+	</script>
+</head>
+<body>
+
+<div id='header'>
+</div>
+
+
+<!--This is the main file for the gui. It is the first to be rendered by server.py -->
+
+<div id='body'>
+  
+	<!-- Navigation -->
+	<div class='navigation'>
+		<ul class="nav nav-pills nav-stacked">
+			<li><form action="/">
+				<button id="home" class="navbutton">
+					<img src="static/img/immuprobe_icon.svg" width='64px' height='64px'>
+				</button>
+			</form></li>
+		    <li><button id="calibratenav" class="navbutton">
+				<img src="static/img/nut4.svg">
+			</button></li>
+		    <li><button id="experinav" class="navbutton"> 
+				<img src="static/img/flask.svg">
+			</button></li>
+		    <li><button id="focusnav" class="navbutton"> 
+				<img src="static/img/camera119.svg">
+			</button></li>
+			<li><button id="previewnav" class="navbutton"> 
+				<img src="static/img/camera120.svg">
+			</button>
+			</li>	
+			<li><div id="time"></div></li>
+			<li><div id="date"></div></li>		
+					
+	</div>
+
+
+	<!-- Content -->
+	<!--This div with tag frame will be changed according to the step of the experiment the user wants to perform-->
+	<div id="frame">
+		<div class="homediv">
+			<p>Calibration status:
+			</p>
+			<p id= "calstatus">
+			</p>
+		</div>
+		<div class="homediv">
+			<p>Spot categories:
+			</p>
+			<p id= "catspots">
+			</p>
+		</div>
+		<br>
+		<div class="homediv">
+			<p id= "camera">
+			</p>
+			<button id="reset" type="button" class="btn btn-danger">Reset device!</button>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Javascript import --> 
+<script type="text/javascript" src="static/js/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="static/js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="static/js/jsfun.js"></script>
+<script type="text/javascript" src="static/js/guiscript.js"></script>
+<script type="text/javascript" src="static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/immuprobe.js"></script>
+
+
+
+</body>
+</html>

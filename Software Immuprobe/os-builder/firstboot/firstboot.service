@@ -1,0 +1,10 @@
+[Unit]
+Description=Package initialization on first boot.
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /opt/firstboot/firstboot.sh
+SyslogIdentifier=firstboot
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,61 @@
+<!-- calibration site, loaded when calibration button is pressed-->
+
+<script type="text/javascript" src="static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/jsfun.js"></script>
+<script src="static/js/jquery.keyboard.js"></script>	
+<script src="static/js/jquery.mousewheel.js"></script>	
+<script type="text/javascript" src="static/js/caliscript.js"></script>		
+
+<div class="container">
+	<!--CSS such that these tabs are actual tabs, not links-->
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#tab1">Assing calibration values</a></li>
+		<li><a data-toggle="tab" href="#tab2">Assing spot categories</a></li>
+		<li><a data-toggle="tab" href="#tab3">Time/date/camera</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="tab1" class="tab-pane fade in active">
+			<br>
+
+			<form id="calibrationForm">
+			</form>
+			<br>
+			<button id="clearcal" type="button" class="btn btn-danger">Clear all calibration points</button>
+    		
+		</div>
+		<div id="tab2" class="tab-pane fade">
+			<br>
+		
+			<form id="categoryForm">	
+			</form>
+		
+		
+			<ul id="availableCategories">
+
+			</ul>
+
+			
+			<input type='text' name="categoryinput" value='' id="categoryinput" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"> 
+			<button id="categorybutton" type="button" class="btn btn-primary">Add Category</button>
+			<button id="clearcat" type="button" class="btn btn-danger">Clear all categories</button>
+		
+		</div>
+		<div id="tab3" class="tab-pane fade">
+			<br>
+		
+			<!--TODO pay attention that the time doesn't get changed when it shouldn't be. -->
+			<p>
+				<p id="time">
+				</p>
+				Set new time/date (yyyy-MM-dd hh:mm:ss):
+				<input type="text" name="timename"id="timeId" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+			</p>
+			<form id="cameraForm">
+				Shutterspeed: <input type="text" name="shutterspeed" id="shutterspeed" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+				ISO: <input type="text" name="iso" id="iso" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+			</form>
+		
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,13 @@
+samples 0 - 3:
+Photograph with cellphone camera.
+
+samples 4 - 8:
+Used 'microscope' prototype.
+
+sample 9: crap
+
+samples 10 - 15:
+Sample and filter pressed directly against the CMOS chip.
+
+samples 16 - 21:
+Same as above but switched off the lights in the lab :-)

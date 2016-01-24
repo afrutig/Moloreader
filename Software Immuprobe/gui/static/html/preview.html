@@ -1,0 +1,32 @@
+<script type="text/javascript" src="static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/jsfun.js"></script>
+<script type="text/javascript" src="static/js/jquery.keyboard.js"></script>	
+<script type="text/javascript" src="static/js/jquery.mousewheel.js"></script>	
+<script type="text/javascript" src="static/js/previewscript.js"></script>
+
+<div id='preview'>
+	<label for='shutter_speed'>shutter speed</label>
+	<input type=text id='shutter_speed' class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox" value=''/>
+	
+	<label for='resolution'>resolution</label>
+	<select id='resolution'>
+		<option value='640x480'>640x480</option>
+		<option value='800x600'>800x600</option>
+		<option value='2592x1944'>2592x1944 (raw, 10-bit)</option>
+	</select>
+	
+	<label for='light_color'>light color</label>
+	<select id='light_color'>
+		<option value='blue'>blue</option>
+		<option value='green'>green</option>
+		<option value='none'>none</option>
+	</select>
+	
+	<label for='auto_exposure'>auto exposure</label>
+	<input type='checkbox' id='auto_exposure' class="" aria-haspopup="" role="checkbox" />
+	
+	
+	<button id='reload'>reload</button>
+	<br />
+	<image src='' style="height:370px; width:493px;"id='preview_image' />
+</div>

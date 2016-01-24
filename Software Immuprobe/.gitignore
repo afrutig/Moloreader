@@ -1,0 +1,4 @@
+doc/
+*.log
+*.pyc
+*.pid
